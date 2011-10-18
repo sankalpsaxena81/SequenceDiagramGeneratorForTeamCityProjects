@@ -32,6 +32,8 @@ namespace WebSequenceDiagramsGenerator
         {
             bool hasSavesAllFiles = true;
             var ds = GetDependencyStringForAllProjects();
+            var files = Directory.GetFiles(path);
+            files.ForEach(f=>File.Delete(f));
             ds.Keys.ForEach(d=>
                                 {
                                     if (ds[d] != string.Empty)
@@ -78,18 +80,23 @@ namespace WebSequenceDiagramsGenerator
         private void DrillDependency(TcBuildConfiguration drillPoint, TcProjects tcProjects)
         {
             var dependentBuilds = tcProjects.FindAllBuildConfigurationsDependentOnBuildConfigurationId(drillPoint.Id);
-            if (dependentBuilds.Count != 0)
-                dependentBuilds.ForEach(db =>{finalString += FormatString(tcProjects, drillPoint, db,null);});
+            
             
             drillPoint.SnapshotDependency.ForEach(sd =>
             {
             
-                finalString += FormatString(tcProjects, drillPoint, tcProjects.FindBuildConfigurationById(sd),drillPoint.Name+" will wait for this to complete successfully"); 
+                finalString += FormatString(tcProjects, drillPoint, tcProjects.FindBuildConfigurationById(sd),String.Format("{0} will wait for this to complete successfully",drillPoint.Name)); 
             });
             if (drillPoint.HasSnapshotDependency)
             {
-                finalString += FormatString(tcProjects, drillPoint, drillPoint, "After successful completion of all");
+                finalString += FormatString(tcProjects, drillPoint, drillPoint, string.Format("After successful completion of all, {0} will complete",drillPoint.Name));
             }
+            if (dependentBuilds.Count != 0)
+                dependentBuilds.ForEach(db =>
+                {
+                    finalString += FormatString(tcProjects, drillPoint, db,
+                                                "On completion of " + drillPoint.Name);
+                });
 
             if (dependentBuilds.Count != 0)
                 dependentBuilds.ForEach(db => DrillDependency(db, tcProjects));
