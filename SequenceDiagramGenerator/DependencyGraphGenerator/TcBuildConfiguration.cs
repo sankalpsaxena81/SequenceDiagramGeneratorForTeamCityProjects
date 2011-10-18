@@ -22,5 +22,10 @@ namespace DependencyGraphGenerator
         public string Id { get;private set; }
 
         public List<string> DependsOn { get;private set; }
+
+        public bool HasSnapshotDependency
+        {
+            get { return SnapshotDependency.Count > 0; }
+        }
     }
 }
