@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{EAD5BCB7-CDC3-4CE0-915C-0F66290DFDF4}</ProjectGuid>
+    <ProjectGuid>{B4CA07DF-1417-479A-83D7-078874CC7432}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DependencyGraphGenerator</RootNamespace>
-    <AssemblyName>DependencyGraphGenerator</AssemblyName>
+    <RootNamespace>Common</RootNamespace>
+    <AssemblyName>Common</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,24 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EnumerableExtensions.cs" />
-    <Compile Include="ITcObjectBuilder.cs" />
-    <Compile Include="ProjectFileParser.cs" />
+    <Compile Include="DirectoryAndFileOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TcArtifacts.cs" />
-    <Compile Include="TcBuildConfiguration.cs" />
-    <Compile Include="TcObjectBuilder.cs" />
-    <Compile Include="TcProject.cs" />
-    <Compile Include="TcProjects.cs" />
-    <Compile Include="TemplateMerger.cs" />
-    <Compile Include="TemplateParser.cs" />
-    <Compile Include="XElementExtensions.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj">
-      <Project>{B4CA07DF-1417-479A-83D7-078874CC7432}</Project>
-      <Name>Common</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

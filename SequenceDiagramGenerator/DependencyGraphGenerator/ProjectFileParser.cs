@@ -27,10 +27,28 @@ namespace DependencyGraphGenerator
                            var name = x.AttributeValueOrEmpty("name");
                            var dependsOn = GetDependsOn(x);
                            var snapshotDependency = GetSnapshotDependency(x);
+//                           var artifactsDependency = GetArtifactsDependency(x);
                            bool isVcsTriggered = IsVcsTriggered(x);
                            tcProject.BuildConfigurations.Add(
-                             new TcBuildConfiguration(id, name, dependsOn, snapshotDependency,isVcsTriggered));
+                             new TcBuildConfiguration(id, name, dependsOn, snapshotDependency, isVcsTriggered, null));
                        };
+        }
+
+        private List<TcArtifacts> GetArtifactsDependency(XElement buildConfigurationElement)
+        {
+            var list = new List<TcArtifacts>();
+            var settings = buildConfigurationElement.Element("settings");
+            if (settings == null) return list;
+            var dependencies = settings.Element("artifact-dependencies");
+            if (dependencies == null) return list;
+            var artifactsDependency = dependencies.Elements("dependency");
+            artifactsDependency.ForEach(sd => list.Add(CreateArtifact(sd)));
+            return list;
+        }
+
+        private TcArtifacts CreateArtifact(XElement sd)
+        {
+            return new TcArtifacts(sd.AttributeValue("sourceBuildTypeId"), sd.Element("artifact").AttributeValue("sourcePath"));
         }
 
         private bool IsVcsTriggered(XElement element)

@@ -27,11 +27,12 @@ namespace DependencyGraphGeneratorTest
             var tcProject1 = new TcProject("Project1");
             var tcProject2 = new TcProject("Project2");
             var tcProject3 = new TcProject("Project3");
-            var dummy = new List<string>();
-            tcProject1.BuildConfigurations.Add(new TcBuildConfiguration("BC1","BC1",dummy,dummy, false));
-            tcProject1.BuildConfigurations.Add(new TcBuildConfiguration("BC2","BC2",dummy,dummy, false));
-            tcProject2.BuildConfigurations.Add(new TcBuildConfiguration("BC3","BC3",dummy,dummy, false));
-            tcProject3.BuildConfigurations.Add(new TcBuildConfiguration("BC4","BC4",dummy,dummy, false));
+            
+            
+            tcProject1.BuildConfigurations.Add(new TcBuildConfiguration("BC1","BC1",null,null, false,null));
+            tcProject1.BuildConfigurations.Add(new TcBuildConfiguration("BC2","BC2",null,null, false,null));
+            tcProject2.BuildConfigurations.Add(new TcBuildConfiguration("BC3","BC3",null,null, false,null));
+            tcProject3.BuildConfigurations.Add(new TcBuildConfiguration("BC4","BC4",null,null, false,null));
             tcProjects.Add(tcProject1);
             tcProjects.Add(tcProject2);
             tcProjects.Add(tcProject3);

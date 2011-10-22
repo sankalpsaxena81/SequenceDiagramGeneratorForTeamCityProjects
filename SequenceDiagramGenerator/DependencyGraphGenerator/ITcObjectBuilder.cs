@@ -2,6 +2,6 @@
 {
     public interface ITcObjectBuilder
     {
-        TcProjects Parse(string rootfolder);
+        TcProjects Parse(string rootFolder);
     }
 }

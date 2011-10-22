@@ -1,6 +1,9 @@
-﻿using System.IO;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Xml.Linq;
+using Common;
 
 namespace DependencyGraphGenerator
 {
@@ -10,22 +13,27 @@ namespace DependencyGraphGenerator
         {
         }
 
-        public  TcProjects Parse(string rootfolder)
+        public  TcProjects Parse(string rootFolder)
         {
             var tcProjects = new TcProjects();
-            var directories = Directory.GetDirectories(rootfolder);
-            var projectDirectories = directories.ToList<string>().FindAll(d=>!Path.GetFileName(d).StartsWith("_"));
+            var projectDirectories = DirectoryAndFileOperations.GetAllTcProjectFolders(rootFolder);
             projectDirectories.ForEach(pd=>tcProjects.Add(CreateProject(pd)));
             return tcProjects;
         }
 
         private static TcProject CreateProject(string pd)
         {
-
-            var xDocument = XDocument.Load(pd + "\\project-config.xml");
-            var tcProject = new ProjectFileParser().Parse(xDocument.ToString());
+            var xml = DirectoryAndFileOperations.ReadConfigAsString(pd);
+            var tcProject = new ProjectFileParser().Parse(xml);
             return tcProject;
            
+        }
+
+        public TcProjects Parse(Dictionary<string, string> projectConfigs)
+        {
+            var tcProjects = new TcProjects();
+            projectConfigs.Keys.ForEach(pc => tcProjects.Add(new ProjectFileParser().Parse(projectConfigs[pc])));
+            return tcProjects;
         }
     }
 }

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSequenceDiagramsGenerato
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSequenceDiagramGenerator", "WebSequenceDiagramGenerator\WebSequenceDiagramGenerator.csproj", "{92852769-63F7-408E-9760-C9529ED50E6B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{B4CA07DF-1417-479A-83D7-078874CC7432}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,16 @@ Global
 		{92852769-63F7-408E-9760-C9529ED50E6B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{92852769-63F7-408E-9760-C9529ED50E6B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{92852769-63F7-408E-9760-C9529ED50E6B}.Release|x86.ActiveCfg = Release|Any CPU
+		{B4CA07DF-1417-479A-83D7-078874CC7432}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4CA07DF-1417-479A-83D7-078874CC7432}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4CA07DF-1417-479A-83D7-078874CC7432}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B4CA07DF-1417-479A-83D7-078874CC7432}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B4CA07DF-1417-479A-83D7-078874CC7432}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B4CA07DF-1417-479A-83D7-078874CC7432}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4CA07DF-1417-479A-83D7-078874CC7432}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4CA07DF-1417-479A-83D7-078874CC7432}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B4CA07DF-1417-479A-83D7-078874CC7432}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B4CA07DF-1417-479A-83D7-078874CC7432}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

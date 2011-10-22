@@ -20,11 +20,11 @@ namespace WebSequenceDiagramsGeneratorTest
             var tcProjects = new TcProjects();
             var tcProject1 = new TcProject("Project1");
             var blankList = new List<string>();
-            tcProject1.BuildConfigurations.Add(new TcBuildConfiguration("BC1", "Build", blankList, blankList, true));
-            tcProject1.BuildConfigurations.Add(new TcBuildConfiguration("BC2", "UnitTest", new List<string> { "BC1"}, blankList, false));
-            tcProject1.BuildConfigurations.Add(new TcBuildConfiguration("BC3", "Artifacts", new List<string> { "BC2" }, new List<string> { "BC4", "BC5" }, false));
-            tcProject1.BuildConfigurations.Add(new TcBuildConfiguration("BC4", "ContractTest1", blankList, blankList, false));
-            tcProject1.BuildConfigurations.Add(new TcBuildConfiguration("BC5", "ContractTest2", blankList, blankList, false));
+            tcProject1.BuildConfigurations.Add(new TcBuildConfiguration("BC1", "Build", blankList, blankList, true,null));
+            tcProject1.BuildConfigurations.Add(new TcBuildConfiguration("BC2", "UnitTest", new List<string> { "BC1"}, blankList, false,null));
+            tcProject1.BuildConfigurations.Add(new TcBuildConfiguration("BC3", "Artifacts", new List<string> { "BC2" }, new List<string> { "BC4", "BC5" }, false, null));
+            tcProject1.BuildConfigurations.Add(new TcBuildConfiguration("BC4", "ContractTest1", blankList, blankList, false, null));
+            tcProject1.BuildConfigurations.Add(new TcBuildConfiguration("BC5", "ContractTest2", blankList, blankList, false, null));
             tcProjects.Add(tcProject1);
 
 //            var objectBuilder = new Mock<ITcObjectBuilder>(MockBehavior.Strict);
@@ -47,15 +47,15 @@ namespace WebSequenceDiagramsGeneratorTest
         public void ShouldGenerateOutputForWebSequenceDiagramAndSaveToFile()
         {
             //setup
-            var path = "C:\\Users\\ssaxena\\.BuildServer\\config";
+            var path = "C:\\Users\\ssaxena\\Desktop\\temp\\New folder\\config";
             var tcProjects = new TcProjects();
             var tcProject1 = new TcProject("Project1");
             var blankList = new List<string>();
-            tcProject1.BuildConfigurations.Add(new TcBuildConfiguration("BC1", "Build", blankList, blankList, true));
-            tcProject1.BuildConfigurations.Add(new TcBuildConfiguration("BC2", "UnitTest", new List<string> { "BC1" }, blankList, false));
-            tcProject1.BuildConfigurations.Add(new TcBuildConfiguration("BC3", "Artifacts", new List<string> { "BC2" }, new List<string> { "BC4", "BC5" }, false));
-            tcProject1.BuildConfigurations.Add(new TcBuildConfiguration("BC4", "ContractTest1", blankList, blankList, false));
-            tcProject1.BuildConfigurations.Add(new TcBuildConfiguration("BC5", "ContractTest2", blankList, blankList, false));
+            tcProject1.BuildConfigurations.Add(new TcBuildConfiguration("BC1", "Build", blankList, blankList, true, null));
+            tcProject1.BuildConfigurations.Add(new TcBuildConfiguration("BC2", "UnitTest", new List<string> { "BC1" }, blankList, false, null));
+            tcProject1.BuildConfigurations.Add(new TcBuildConfiguration("BC3", "Artifacts", new List<string> { "BC2" }, new List<string> { "BC4", "BC5" }, false, null));
+            tcProject1.BuildConfigurations.Add(new TcBuildConfiguration("BC4", "ContractTest1", blankList, blankList, false, null));
+            tcProject1.BuildConfigurations.Add(new TcBuildConfiguration("BC5", "ContractTest2", blankList, blankList, false, null));
             tcProjects.Add(tcProject1);
 
             //            var objectBuilder = new Mock<ITcObjectBuilder>(MockBehavior.Strict);

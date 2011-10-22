@@ -10,12 +10,13 @@ namespace DependencyGraphGenerator
         public bool IsVcsTriggered { get; private set; }
         public string Name { get; private set; }
 
-        public TcBuildConfiguration(string id, string name, List<string> dependsOn, List<string> snapshotDependency, bool isVcsTriggered)
+        public TcBuildConfiguration(string id, string name, List<string> dependsOn, List<string> snapshotDependency, bool isVcsTriggered,               List<TcArtifacts> artifactsDependency)
         {
             Id = id;
             Name = name;
-            DependsOn = dependsOn;
-            SnapshotDependency = snapshotDependency;
+            DependsOn = dependsOn?? new List<string>();
+            SnapshotDependency = snapshotDependency??new List<string>();
+            ArtifactsDependency = artifactsDependency??new List<TcArtifacts>();
             IsVcsTriggered = isVcsTriggered;
         }
 
@@ -27,5 +28,7 @@ namespace DependencyGraphGenerator
         {
             get { return SnapshotDependency.Count > 0; }
         }
+
+        public List<TcArtifacts> ArtifactsDependency { get; private set; }
     }
 }
