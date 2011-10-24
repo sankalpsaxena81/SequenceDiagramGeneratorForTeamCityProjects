@@ -2,6 +2,6 @@
 {
     public interface ITcObjectBuilder
     {
-        TcProjects Parse(string rootFolder);
+        TcProjects BuildObjectGraph(string rootFolder);
     }
 }

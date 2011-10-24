@@ -450,6 +450,16 @@ namespace DependencyGraphGeneratorTest
             Assert.AreEqual("btTemplate3",list[0]);
             Assert.AreEqual("btTemplate7",list[1]);
             Assert.AreEqual("btTemplate4",list[2]);
+            string[] arr1= new string[2];
+            arr1[0] = "sds";
+            arr1[1] = "sds";
+            string[] arr2 = new string[5];
+            arr2[0] = "ggg";
+            arr2[1] = "ggg";
+            arr2[2] = "ggg";
+            arr2[3] = "ggg";
+            arr2[4] = "ggg";
+            var array = arr1.Concat(arr2).ToArray();
         }
 
         [Test]

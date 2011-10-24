@@ -21,9 +21,9 @@ namespace WebSequenceDiagramsGenerator
             dictionary = new Dictionary<string, string>();
         }
 
-        public Dictionary<string, string> GetDependencyStringForAllProjects()
+        public Dictionary<string, string> GetSequenceDiagramAsStringForEachProjects()
         {
-            var tcProjects = _objectBuilder.Parse(_configPath);
+            var tcProjects = _objectBuilder.BuildObjectGraph(_configPath);
             tcProjects.ForEach(tcp => dictionary.Add(tcp.Id, GenerateDependencyString(tcp.Id,tcProjects)));
             return dictionary;
         }
@@ -31,35 +31,66 @@ namespace WebSequenceDiagramsGenerator
         public bool GenerateDiagramsAndSaveAsFilesInDirectory(string path)
         {
             bool hasSavesAllFiles = true;
-            var ds = GetDependencyStringForAllProjects();
-            var files = Directory.GetFiles(path);
-            files.ForEach(f=>File.Delete(f));
+            DeleteExstingFilesInDirectory(path);
+            var ds = GetSequenceDiagramAsStringForEachProjects();
             ds.Keys.ForEach(d=>
                                 {
-                                    if (ds[d] != string.Empty)
-                                    {
-                                        var stringToBeWritten = GetStringToBeWritten(ds[d]);
-                                        string[] lines = new string[stringToBeWritten.Length+2];
-                                        lines[0] = "<div class=wsd wsd_style=\"modern-blue\" ><pre>";
-                                        int i = 1;
-                                        foreach (var str in stringToBeWritten)
-                                        {
-                                            lines[i++] = str;
-                                        }
-                                        lines[i] = "</pre></div><script type=\"text/javascript\" src=\"http://www.websequencediagrams.com/service.js\"></script>";
-                                        try
-                                        {
-                                            File.WriteAllLines(string.Format("{0}\\{1}.html", path, d), lines);
-                                        }
-                                        catch (Exception)
-                                        {
-
-                                            hasSavesAllFiles=false;
-                                        }
-                                        
-                                    }
+                                    if (ds[d] == string.Empty)
+                                        return;
+                                    hasSavesAllFiles=CreateHtmlFileWithSequenceDiagram(ds, d, path);
                                 });
             return hasSavesAllFiles;
+        }
+
+        private bool CreateHtmlFileWithSequenceDiagram(Dictionary<string, string> ds, string d, string path)
+        {
+            
+            var stringToBeWritten = GetStringToBeWritten(ds[d]);
+            string[] lines = new string[1];
+            lines[0]=CreateFirstLine();
+            lines = lines.Concat(CreateSequenceDiagramLines(stringToBeWritten)).ToArray();
+            lines=lines.Concat(new string[1]{CreateLastLine()}).ToArray();
+            return WriteLinesToFile(d, lines, path);
+        }
+
+        private bool WriteLinesToFile(string d, string[] lines, string path)
+        {
+            bool hasSavesAllFiles=true;
+            try
+            {
+                File.WriteAllLines(string.Format("{0}\\{1}.html", path, d), lines);
+            }
+            catch (Exception)
+            {
+
+                hasSavesAllFiles=false;
+            }
+            return hasSavesAllFiles;
+        }
+
+        private string CreateLastLine()
+        {
+            return "</pre></div><script type=\"text/javascript\" src=\"http://www.websequencediagrams.com/service.js\"></script>";
+        }
+
+        private string[] CreateSequenceDiagramLines(string[] stringToBeWritten)
+        {
+            string[] lines = new string[stringToBeWritten.Length];
+            int i = 0;
+            foreach (var str in stringToBeWritten)
+                lines[i++] = str;
+            return lines;
+        }
+
+        private string CreateFirstLine()
+        {
+            return "<div class=wsd wsd_style=\"modern-blue\" ><pre>";
+        }
+
+        private void DeleteExstingFilesInDirectory(string path)
+        {
+            var files = Directory.GetFiles(path);
+            files.ForEach(f=>File.Delete(f));
         }
 
         private string[] GetStringToBeWritten(string s)

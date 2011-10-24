@@ -172,7 +172,7 @@ namespace DependencyGraphGeneratorTest
 
             var mergeAllProjectConfigs = templateMerger.MergeAllProjectConfigs();
             var tcObjectBuilder = new TcObjectBuilder();
-            var tcProjects = tcObjectBuilder.Parse(mergeAllProjectConfigs);
+            var tcProjects = tcObjectBuilder.CreateTCProjects(mergeAllProjectConfigs);
         }
     }
 }
