@@ -29,6 +29,12 @@ namespace DependencyGraphGenerator
             get { return SnapshotDependency.Count > 0; }
         }
 
+        public bool HasArtifactsDependency
+        {
+            get { return ArtifactsDependency.Count > 0; }
+        }
         public List<TcArtifacts> ArtifactsDependency { get; private set; }
+
+        public bool IsPinnedConfiguration { get; private set; }
     }
 }

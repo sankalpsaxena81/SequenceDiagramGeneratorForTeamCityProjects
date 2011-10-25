@@ -102,10 +102,17 @@ namespace WebSequenceDiagramsGenerator
         {
             finalString = string.Empty;
             var tcProject = tcProjects.Find(p => p.Id.Equals(pd));
-            var startPoint = tcProject.BuildConfigurations.Find(bc => bc.IsVcsTriggered);
-            if(startPoint!=null)
-                DrillDependency(startPoint, tcProjects);
+            var startPoints = GetBuildConfigurationToStartDrillingFrom(tcProject);
+            if (startPoints.Count > 0)
+                startPoints.ForEach(sp=>DrillDependency(sp, tcProjects));
             return  finalString;
+        }
+
+        private List<TcBuildConfiguration> GetBuildConfigurationToStartDrillingFrom(TcProject tcProject)
+        {
+            var list = new List<TcBuildConfiguration>();
+             list.Add(tcProject.BuildConfigurations.Find(bc => bc.IsVcsTriggered));
+            return list;
         }
 
         private void DrillDependency(TcBuildConfiguration drillPoint, TcProjects tcProjects)
@@ -122,6 +129,16 @@ namespace WebSequenceDiagramsGenerator
             {
                 finalString += FormatString(tcProjects, drillPoint, drillPoint, string.Format("After successful completion of all, {0} will complete",drillPoint.Name));
             }
+
+            if (drillPoint.HasArtifactsDependency)
+            {
+                drillPoint.ArtifactsDependency.ForEach(ad =>
+                {
+                    finalString += FormatStringForArtifacts(tcProjects, drillPoint, tcProjects.FindBuildConfigurationById(ad.BuildConfigurationId),string.Format("Get {0} artifacts" ,ad.ArtifactFile));
+                                                               
+                });
+            }
+
             if (dependentBuilds.Count != 0)
                 dependentBuilds.ForEach(db =>
                 {
@@ -138,6 +155,10 @@ namespace WebSequenceDiagramsGenerator
         private string FormatString(TcProjects tcProjects, TcBuildConfiguration drillPoint, TcBuildConfiguration db,string desc)
         {
             return string.Format("{0}-{1}->{2}-{3}:{4}#", tcProjects.FindProjectByBuildConfigurationId(drillPoint.Id).Id, drillPoint.Name, tcProjects.FindProjectByBuildConfigurationId(db.Id).Id, db.Name, desc??string.Empty);
+        }
+        private string FormatStringForArtifacts(TcProjects tcProjects, TcBuildConfiguration drillPoint, TcBuildConfiguration db, string desc)
+        {
+            return string.Format("{0}-{1}-->{2}-{3}:{4}#", tcProjects.FindProjectByBuildConfigurationId(drillPoint.Id).Id, drillPoint.Name, tcProjects.FindProjectByBuildConfigurationId(db.Id).Id, db.Name, desc ?? string.Empty);
         }
     }
 }
