@@ -12,40 +12,26 @@
       <File id="23FFBF5F-276C-4411-8509-B58D970379D0/f:Class1.cs" caret="153" fromTop="7" />
       <File id="EAD5BCB7-CDC3-4CE0-915C-0F66290DFDF4/f:XElementExtensions.cs" caret="175" fromTop="8" />
       <File id="EAD5BCB7-CDC3-4CE0-915C-0F66290DFDF4/f:TcProject.cs" caret="135" fromTop="6" />
-      <File id="EAD5BCB7-CDC3-4CE0-915C-0F66290DFDF4/f:TcProjects.cs" caret="1345" fromTop="16" />
-      <File id="EAD5BCB7-CDC3-4CE0-915C-0F66290DFDF4/f:TcBuildConfiguration.cs" caret="563" fromTop="14" />
-      <File id="EAD5BCB7-CDC3-4CE0-915C-0F66290DFDF4/f:TcArtifacts.cs" caret="407" fromTop="12" />
       <File id="EAD5BCB7-CDC3-4CE0-915C-0F66290DFDF4/f:EnumerableExtensions.cs" caret="393" fromTop="13" />
       <File id="2A6780C8-A2CB-4C30-B583-DB86F1866B26/f:TCProjectsTest.cs" caret="1515" fromTop="22" />
-      <File id="EAD5BCB7-CDC3-4CE0-915C-0F66290DFDF4/f:ProjectFileParser.cs" caret="133" fromTop="6" />
       <File id="EAD5BCB7-CDC3-4CE0-915C-0F66290DFDF4/f:TemplateParser.cs" caret="293" fromTop="13" />
       <File id="EAD5BCB7-CDC3-4CE0-915C-0F66290DFDF4/f:TemplateMerger.cs" caret="814" fromTop="9" />
       <File id="EAD5BCB7-CDC3-4CE0-915C-0F66290DFDF4/f:ITcObjectBuilder.cs" caret="60" fromTop="2" />
       <File id="B4CA07DF-1417-479A-83D7-078874CC7432/f:DirectoryAndFileOperations.cs" caret="602" fromTop="9" />
       <File id="2A6780C8-A2CB-4C30-B583-DB86F1866B26/f:TemplateParserTest.cs" caret="19485" fromTop="13" />
-      <File id="92852769-63F7-408E-9760-C9529ED50E6B/f:DiagramsGenerator.cs" caret="518" fromTop="17" />
       <File id="2A6780C8-A2CB-4C30-B583-DB86F1866B26/f:TemplateMergerTest.cs" caret="6996" fromTop="19" />
       <File id="FFF319E9-3E21-4D7A-BEF7-FCC557839681/f:DiagramsGeneratorTest.cs" caret="366" fromTop="12" />
       <File id="EAD5BCB7-CDC3-4CE0-915C-0F66290DFDF4/f:TcObjectBuilder.cs" caret="33" fromTop="0" />
       <File id="2A6780C8-A2CB-4C30-B583-DB86F1866B26/f:ProjectFileParserTest.cs" caret="6655" fromTop="12" />
-      <File id="4A3CA8BB-ADBB-457D-82AA-62AEFFD50CA0/f:FunctionalTest1.cs" caret="821" fromTop="25" />
-      <File id="C71A8697-1E4C-491A-AC6A-A727DF70BB8D/f:Program.cs" caret="337" fromTop="11" />
+      <File id="C71A8697-1E4C-491A-AC6A-A727DF70BB8D/f:Program.cs" caret="665" fromTop="16" />
+      <File id="EAD5BCB7-CDC3-4CE0-915C-0F66290DFDF4/f:TcArtifacts.cs" caret="217" fromTop="7" />
+      <File id="92852769-63F7-408E-9760-C9529ED50E6B/f:DiagramsGenerator.cs" caret="4221" fromTop="18" />
+      <File id="EAD5BCB7-CDC3-4CE0-915C-0F66290DFDF4/f:TcBuildConfiguration.cs" caret="369" fromTop="12" />
+      <File id="EAD5BCB7-CDC3-4CE0-915C-0F66290DFDF4/f:ProjectFileParser.cs" caret="149" fromTop="6" />
+      <File id="EAD5BCB7-CDC3-4CE0-915C-0F66290DFDF4/f:TcProjects.cs" caret="2002" fromTop="10" />
+      <File id="4A3CA8BB-ADBB-457D-82AA-62AEFFD50CA0/f:FunctionalTest1.cs" caret="1053" fromTop="17" />
     </RecentFiles>
     <RecentEdits>
-      <File id="2A6780C8-A2CB-4C30-B583-DB86F1866B26/f:TemplateParserTest.cs" caret="19418" fromTop="11" />
-      <File id="92852769-63F7-408E-9760-C9529ED50E6B/f:DiagramsGenerator.cs" caret="3054" fromTop="27" />
-      <File id="92852769-63F7-408E-9760-C9529ED50E6B/f:DiagramsGenerator.cs" caret="3191" fromTop="32" />
-      <File id="92852769-63F7-408E-9760-C9529ED50E6B/f:DiagramsGenerator.cs" caret="1756" fromTop="8" />
-      <File id="92852769-63F7-408E-9760-C9529ED50E6B/f:DiagramsGenerator.cs" caret="2272" fromTop="19" />
-      <File id="92852769-63F7-408E-9760-C9529ED50E6B/f:DiagramsGenerator.cs" caret="2545" fromTop="29" />
-      <File id="92852769-63F7-408E-9760-C9529ED50E6B/f:DiagramsGenerator.cs" caret="2099" fromTop="14" />
-      <File id="92852769-63F7-408E-9760-C9529ED50E6B/f:DiagramsGenerator.cs" caret="1486" fromTop="10" />
-      <File id="FFF319E9-3E21-4D7A-BEF7-FCC557839681/f:DiagramsGeneratorTest.cs" caret="2759" fromTop="14" />
-      <File id="FFF319E9-3E21-4D7A-BEF7-FCC557839681/f:DiagramsGeneratorTest.cs" caret="2759" fromTop="13" />
-      <File id="FFF319E9-3E21-4D7A-BEF7-FCC557839681/f:DiagramsGeneratorTest.cs" caret="2725" fromTop="23" />
-      <File id="FFF319E9-3E21-4D7A-BEF7-FCC557839681/f:DiagramsGeneratorTest.cs" caret="2066" fromTop="20" />
-      <File id="FFF319E9-3E21-4D7A-BEF7-FCC557839681/f:DiagramsGeneratorTest.cs" caret="1857" fromTop="14" />
-      <File id="FFF319E9-3E21-4D7A-BEF7-FCC557839681/f:DiagramsGeneratorTest.cs" caret="1885" fromTop="24" />
       <File id="FFF319E9-3E21-4D7A-BEF7-FCC557839681/f:DiagramsGeneratorTest.cs" caret="1857" fromTop="19" />
       <File id="FFF319E9-3E21-4D7A-BEF7-FCC557839681/f:DiagramsGeneratorTest.cs" caret="1453" fromTop="9" />
       <File id="FFF319E9-3E21-4D7A-BEF7-FCC557839681/f:DiagramsGeneratorTest.cs" caret="2762" fromTop="19" />
@@ -62,6 +48,20 @@
       <File id="C71A8697-1E4C-491A-AC6A-A727DF70BB8D/f:Program.cs" caret="694" fromTop="20" />
       <File id="C71A8697-1E4C-491A-AC6A-A727DF70BB8D/f:Program.cs" caret="1065" fromTop="22" />
       <File id="C71A8697-1E4C-491A-AC6A-A727DF70BB8D/f:Program.cs" caret="319" fromTop="10" />
+      <File id="EAD5BCB7-CDC3-4CE0-915C-0F66290DFDF4/f:ProjectFileParser.cs" caret="2228" fromTop="21" />
+      <File id="EAD5BCB7-CDC3-4CE0-915C-0F66290DFDF4/f:ProjectFileParser.cs" caret="1975" fromTop="12" />
+      <File id="EAD5BCB7-CDC3-4CE0-915C-0F66290DFDF4/f:ProjectFileParser.cs" caret="1363" fromTop="23" />
+      <File id="EAD5BCB7-CDC3-4CE0-915C-0F66290DFDF4/f:TcBuildConfiguration.cs" caret="1197" fromTop="17" />
+      <File id="92852769-63F7-408E-9760-C9529ED50E6B/f:DiagramsGenerator.cs" caret="6590" fromTop="27" />
+      <File id="92852769-63F7-408E-9760-C9529ED50E6B/f:DiagramsGenerator.cs" caret="5383" fromTop="15" />
+      <File id="92852769-63F7-408E-9760-C9529ED50E6B/f:DiagramsGenerator.cs" caret="3924" fromTop="12" />
+      <File id="92852769-63F7-408E-9760-C9529ED50E6B/f:DiagramsGenerator.cs" caret="4404" fromTop="18" />
+      <File id="92852769-63F7-408E-9760-C9529ED50E6B/f:DiagramsGenerator.cs" caret="4221" fromTop="18" />
+      <File id="EAD5BCB7-CDC3-4CE0-915C-0F66290DFDF4/f:TcBuildConfiguration.cs" caret="1350" fromTop="21" />
+      <File id="4A3CA8BB-ADBB-457D-82AA-62AEFFD50CA0/f:FunctionalTest1.cs" caret="1206" fromTop="30" />
+      <File id="EAD5BCB7-CDC3-4CE0-915C-0F66290DFDF4/f:TcProjects.cs" caret="2234" fromTop="15" />
+      <File id="EAD5BCB7-CDC3-4CE0-915C-0F66290DFDF4/f:TcProjects.cs" caret="2257" fromTop="15" />
+      <File id="4A3CA8BB-ADBB-457D-82AA-62AEFFD50CA0/f:FunctionalTest1.cs" caret="1121" fromTop="19" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -78,10 +78,10 @@
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
       <Item value="test" priority="6" />
-      <Item value="string" priority="56" />
+      <Item value="string" priority="57" />
       <Item value="ProjectFileParserTest`0" priority="0" />
-      <Item value="return" priority="37" />
-      <Item value="new" priority="44" />
+      <Item value="return" priority="41" />
+      <Item value="new" priority="47" />
       <Item value="TcProject" priority="4" />
       <Item value="Assert`0" priority="12" />
       <Item value="tcProject" priority="4" />
@@ -90,29 +90,29 @@
       <Item value="TcBuildConfiguration" priority="2" />
       <Item value="BitConverter`0" priority="1" />
       <Item value="BuildConfigurations" priority="0" />
-      <Item value="List&lt;TcBuildConfiguration&gt;" priority="0" />
+      <Item value="List&lt;TcBuildConfiguration&gt;" priority="2" />
       <Item value="x" priority="0" />
       <Item value="var" priority="6" />
       <Item value="buildConfigurationElement" priority="0" />
       <Item value="settings" priority="6" />
       <Item value="bt" priority="3" />
       <Item value="t" priority="1" />
-      <Item value="if" priority="20" />
-      <Item value="List" priority="8" />
-      <Item value="list" priority="8" />
+      <Item value="if" priority="25" />
+      <Item value="List" priority="9" />
+      <Item value="list" priority="12" />
       <Item value="parameters" priority="1" />
       <Item value="params" priority="1" />
-      <Item value="p" priority="8" />
+      <Item value="p" priority="9" />
       <Item value="dependsOn" priority="0" />
       <Item value="buildTrigger" priority="1" />
       <Item value="dependencies" priority="1" />
       <Item value="d" priority="5" />
-      <Item value="sd" priority="1" />
+      <Item value="sd" priority="3" />
       <Item value="public" priority="6" />
       <Item value="tcProject1" priority="1" />
       <Item value="List`0" priority="0" />
       <Item value="List&lt;string&gt;" priority="5" />
-      <Item value="TcBuildConfiguration`0" priority="3" />
+      <Item value="TcBuildConfiguration`0" priority="4" />
       <Item value="DiagramsGeneratorTest`0" priority="0" />
       <Item value="TeamCityProjectsTest`0" priority="0" />
       <Item value="TCProjects`0" priority="0" />
@@ -126,16 +126,16 @@
       <Item value="ProjectFileParser`0" priority="1" />
       <Item value="XElementExtensions`0" priority="0" />
       <Item value="XmlReader`0" priority="0" />
-      <Item value="tcProjects" priority="13" />
+      <Item value="tcProjects" priority="14" />
       <Item value="File`0" priority="1" />
       <Item value="xDocument" priority="0" />
-      <Item value="this" priority="3" />
+      <Item value="this" priority="5" />
       <Item value="Name" priority="0" />
       <Item value="name" priority="0" />
       <Item value="substring" priority="0" />
       <Item value="tcProject3" priority="0" />
       <Item value="IFormatProvider`0" priority="7" />
-      <Item value="bc" priority="4" />
+      <Item value="bc" priority="8" />
       <Item value="null" priority="5" />
       <Item value="project" priority="3" />
       <Item value="tcProject2" priority="0" />
@@ -159,7 +159,7 @@
       <Item value="dependency" priority="0" />
       <Item value="while" priority="0" />
       <Item value="startPoint" priority="1" />
-      <Item value="drillPoint" priority="6" />
+      <Item value="drillPoint" priority="8" />
       <Item value="else" priority="1" />
       <Item value="dependentBuilds" priority="1" />
       <Item value="finalString" priority="3" />
@@ -180,7 +180,7 @@
       <Item value="str" priority="0" />
       <Item value="Directory`0" priority="0" />
       <Item value="String`0" priority="0" />
-      <Item value="ArtifactsDependency" priority="0" />
+      <Item value="ArtifactsDependency" priority="1" />
       <Item value="TcArtifacts" priority="0" />
       <Item value="buildConfigurationId" priority="0" />
       <Item value="TcArtifacts`0" priority="1" />
@@ -223,7 +223,7 @@
       <Item value="config" priority="4" />
       <Item value="templateChildElements" priority="1" />
       <Item value="elementToFind" priority="2" />
-      <Item value="element" priority="5" />
+      <Item value="element" priority="6" />
       <Item value="xElementFromConfig" priority="1" />
       <Item value="NetTcpStyleUriParser`0" priority="0" />
       <Item value="newElement" priority="5" />
@@ -245,7 +245,7 @@
       <Item value="mergedXelment" priority="1" />
       <Item value="mergedXml" priority="0" />
       <Item value="TcObjectBuilder`0" priority="0" />
-      <Item value="tcObjectBuilder" priority="0" />
+      <Item value="tcObjectBuilder" priority="1" />
       <Item value="mergeAllProjectConfigs" priority="1" />
       <Item value="projectConfigs" priority="1" />
       <Item value="hasSaved" priority="1" />
@@ -259,6 +259,9 @@
       <Item value="Console`0" priority="1" />
       <Item value="saveDiagramsAtPath" priority="0" />
       <Item value="message" priority="0" />
+      <Item value="ad" priority="2" />
+      <Item value="startPoints" priority="0" />
+      <Item value="buildObjectGraph" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@NUnit.Framework.Assert">
       <Item value="IsNaN`0" priority="0" />
@@ -284,13 +287,13 @@
       <Item value="ToString`0" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:DependencyGraphGenerator.TcProject">
-      <Item value="BuildConfigurations" priority="6" />
+      <Item value="BuildConfigurations" priority="7" />
       <Item value="Id" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
-      <Item value="Add`0" priority="7" />
-      <Item value="Count" priority="4" />
-      <Item value="ForEach`0" priority="8" />
+      <Item value="Add`0" priority="10" />
+      <Item value="Count" priority="5" />
+      <Item value="ForEach`0" priority="13" />
       <Item value="Find`0" priority="0" />
       <Item value="Contains`0" priority="0" />
     </ItemStatistics>
@@ -299,15 +302,18 @@
       <Item value="Equals`0" priority="1" />
       <Item value="Id" priority="3" />
       <Item value="IsVcsTriggered" priority="0" />
-      <Item value="SnapshotDependency" priority="2" />
+      <Item value="SnapshotDependency" priority="3" />
       <Item value="DependsOn" priority="0" />
+      <Item value="ArtifactsDependency" priority="2" />
+      <Item value="HasArtifactsDependency" priority="1" />
+      <Item value="HasSnapshotDependency" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
-      <Item value="ForEach`1" priority="16" />
+      <Item value="ForEach`1" priority="17" />
       <Item value="ToArray`1" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.String">
-      <Item value="Equals`0" priority="5" />
+      <Item value="Equals`0" priority="7" />
       <Item value="StartsWith`0" priority="1" />
       <Item value="Contains`0" priority="0" />
       <Item value="Split`0" priority="0" />
@@ -327,8 +333,8 @@
       <Item value="Count" priority="1" />
       <Item value="Find`0" priority="2" />
       <Item value="FindAllProjectsWithNameContaining`0" priority="0" />
-      <Item value="ForEach`0" priority="2" />
-      <Item value="FindBuildConfigurationById`0" priority="1" />
+      <Item value="ForEach`0" priority="3" />
+      <Item value="FindBuildConfigurationById`0" priority="3" />
       <Item value="FindAll`0" priority="0" />
       <Item value="FindAllBuildConfigurationsDependentOnBuildConfigurationId`0" priority="0" />
     </ItemStatistics>
@@ -365,7 +371,7 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.String">
       <Item value="Empty" priority="6" />
-      <Item value="Format`0" priority="7" />
+      <Item value="Format`0" priority="8" />
       <Item value="IsNullOrEmpty`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.Dictionary`2">
@@ -404,11 +410,15 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:DependencyGraphGenerator.TcObjectBuilder">
       <Item value="Parse`0" priority="0" />
-      <Item value="BuildObjectGraph`0" priority="0" />
+      <Item value="BuildObjectGraph`0" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Console">
       <Item value="WriteLine`0" priority="0" />
       <Item value="Read`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DependencyGraphGenerator.TcArtifacts">
+      <Item value="BuildConfigurationId" priority="1" />
+      <Item value="ArtifactFile" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

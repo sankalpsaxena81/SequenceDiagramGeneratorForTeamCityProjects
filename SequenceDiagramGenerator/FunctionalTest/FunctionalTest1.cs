@@ -22,5 +22,16 @@ namespace DependencyGraphGeneratorTest.FunctionalTest
                 "C:\\Users\\ssaxena\\Desktop\\AutoSequenceDiagramGenerator");
             Assert.IsTrue(hasSaved);
         }
+
+        [Test]
+        public void ShouldFindOutDependecy()
+        {
+            string path = "C:\\Users\\ssaxena\\Desktop\\sankalpTCTemp\\config";
+            var tcObjectBuilder = new TcObjectBuilder();
+            var tcProjects = tcObjectBuilder.BuildObjectGraph(path);
+            
+
+            var builds = tcProjects.FindBuildConfigurationcDependentOnBuildConfiguration("bt104");
+        }
     }
 }

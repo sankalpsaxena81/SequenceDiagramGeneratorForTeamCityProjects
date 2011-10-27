@@ -35,6 +35,6 @@ namespace DependencyGraphGenerator
         }
         public List<TcArtifacts> ArtifactsDependency { get; private set; }
 
-        public bool IsPinnedConfiguration { get; private set; }
+        public bool IsPinnedConfiguration { get; set; }
     }
 }

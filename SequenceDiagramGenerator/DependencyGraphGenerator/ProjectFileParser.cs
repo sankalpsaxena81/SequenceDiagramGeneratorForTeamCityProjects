@@ -10,7 +10,6 @@ namespace DependencyGraphGenerator
 
         public TcProject Parse(string xml)
         {
-            
             xElement = XElement.Parse(xml);
             var id = xElement.AttributeValue("id");
             var tcProject = new TcProject(id);
@@ -29,8 +28,10 @@ namespace DependencyGraphGenerator
                            var snapshotDependency = GetSnapshotDependency(x);
                            var artifactsDependency = GetArtifactsDependency(x);
                            bool isVcsTriggered = IsVcsTriggered(x);
+
                            tcProject.BuildConfigurations.Add(
-                             new TcBuildConfiguration(id, name, dependsOn, snapshotDependency, isVcsTriggered, artifactsDependency));
+                             new TcBuildConfiguration(id, name, dependsOn, snapshotDependency, isVcsTriggered, artifactsDependency)
+                                                        { IsPinnedConfiguration = name.Equals("Pin")});
                        };
         }
 

@@ -24,5 +24,11 @@ namespace Common
             var configAsString = ReadConfigAsString(folderName);
             return XElement.Parse(configAsString);
         }
+
+        public static string GetFolderNameFromPath(string path)
+        {
+            return path.Split('\\').Last();
+            
+        }
     }
 }

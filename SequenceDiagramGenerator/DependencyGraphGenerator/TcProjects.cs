@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace DependencyGraphGenerator
 {
@@ -46,6 +47,39 @@ namespace DependencyGraphGenerator
                             list.Add(bc);           
                     }));
             return list;
+        }
+
+        public List<TcBuildConfiguration> FindBuildConfigurationcDependentOnBuildConfiguration(string id)
+        {
+            var list = new List<TcBuildConfiguration>();
+            ForEach(p => p.BuildConfigurations.ForEach(bc =>
+                    {
+                        
+                        if (bc.HasArtifactsDependency)
+                            FindInArtifactsDependency(bc, id, list);
+                        if (bc.HasSnapshotDependency)
+                            FindInSnapshotDependency(bc, id, list);
+                        
+                    }));
+            return list;
+        }
+
+        private void FindInSnapshotDependency(TcBuildConfiguration bc, string id, List<TcBuildConfiguration> list)
+        {
+            bc.SnapshotDependency.ForEach(sd =>
+                                              {
+                                                  if(sd.Equals(id))   
+                                                      list.Add(bc);
+                                              });
+        }
+
+        private void FindInArtifactsDependency(TcBuildConfiguration bc, string id, List<TcBuildConfiguration> list)
+        {
+            bc.ArtifactsDependency.ForEach(ad =>
+                                               {
+                                                   if(ad.BuildConfigurationId.Equals(id) )
+                                                       list.Add(bc);  
+                                               });
         }
     }
 }

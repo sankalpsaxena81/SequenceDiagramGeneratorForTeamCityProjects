@@ -13,5 +13,6 @@ namespace DependencyGraphGenerator
         }
 
         public List<TcBuildConfiguration> BuildConfigurations { get; set; }
+        public string ProjectName { get; set; }
     }
 }

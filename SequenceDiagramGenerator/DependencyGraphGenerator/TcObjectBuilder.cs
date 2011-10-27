@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Linq;
+using Common;
 
 namespace DependencyGraphGenerator
 {
@@ -15,7 +16,12 @@ namespace DependencyGraphGenerator
         public TcProjects CreateTCProjects(Dictionary<string, string> projectConfigs)
         {
             var tcProjects = new TcProjects();
-            projectConfigs.Keys.ForEach(pc => tcProjects.Add(new ProjectFileParser().Parse(projectConfigs[pc])));
+            projectConfigs.Keys.ForEach(pc =>
+                                            {
+                                                var tcProject = new ProjectFileParser().Parse(projectConfigs[pc]);
+                                                tcProject.ProjectName = DirectoryAndFileOperations.GetFolderNameFromPath(pc);
+                                                tcProjects.Add(tcProject);
+                                            });
             return tcProjects;
         }
 
