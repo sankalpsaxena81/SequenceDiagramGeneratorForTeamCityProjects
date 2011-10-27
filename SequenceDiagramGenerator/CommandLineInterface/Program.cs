@@ -11,7 +11,7 @@ namespace CommandLineInterface
     {
         static void Main(string[] args)
         {
-            if (args != null && args.Length==2)
+            if (args != null && args.Length == 2)
             {
                 var rootFolder = args[0];
                 var saveDiagramsAtPath = args[1];
@@ -25,7 +25,11 @@ namespace CommandLineInterface
                 Console.WriteLine(message);
             }
             else
+            {
                 Console.WriteLine("Insifficient arguments. Usage: ");
+                Console.WriteLine(
+                    "WebSequenceDiagramGeneratorCmd \"PathToTeamCityConfigsRootFolder\" \"PathToDirectoryWhereDiagramsShouldBeStored\" ");
+            }
             Console.Read();
         }
     }
